@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import { useEffect } from "react";
 import './App.css';
+import searchIcon from './search.svg'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// 1cdcba83
+
+const apiUrl = 'http://www.omdbapi.com?apikey=1cdcba83';
+
+const App = () => {
+    const searchMovie = async (title) => {
+        const response = await fetch(`${apiUrl}&s=${title}`);
+        const data = await response.json();
+
+        console.log(data.Search);
+    }
+    useEffect(() => {
+        searchMovie('superman');
+    }, []);
+    return (
+        <div className="app">
+            <h1>Moviescape</h1>
+        </div>
+    );
 }
 
 export default App;
