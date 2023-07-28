@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
@@ -9,12 +8,12 @@
 }
 
 :root {
-  --font-dm-serif: 'DM Serif Display', serif;
   --font-raleway: "Raleway", sans-serif;
+  --font-noto: 'Noto Sans', sans-serif;
 }
 
 body {
-  font-family: var(--dm-serif);
+  font-family: var(--font-noto);
   background-color: #212426;
 }
 
@@ -28,9 +27,11 @@ body {
 }
 
 h1 {
+  font-family: 'Oswald', sans-serif;
   font-size: 3rem;
   font-weight: bold;
-  font-style: italic;
+  font-style: normal;
+  text-transform: uppercase;
   letter-spacing: 0.9px;
   background: linear-gradient(
     90deg,
@@ -41,6 +42,10 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: fit-content;
+}
+
+h1::first-letter{
+  font-size: 4.5rem;
 }
 
 .search {
@@ -177,7 +182,7 @@ h1 {
 
 .movie div:nth-of-type(3) h3 {
   margin-top: 5px;
-  font-family: "Roboto Slab", serif;
+  font-family: var(--font-noto);
   color: #f9d3b4;
 }
 
