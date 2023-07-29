@@ -6,14 +6,6 @@ import MovieItem from "./MovieItem";
 
 const apiUrl = 'http://www.omdbapi.com?apikey=1cdcba83';
 
-const movie1 = {
-    "Title": "Batman Begins",
-    "Year": "2005",
-    "imdbID": "tt0372784",
-    "Type": "movie",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
-}
-
 const App = () => {
     const [movies, setMovies] = useState([]);
     const [search, setSearch] = useState("");
@@ -26,7 +18,7 @@ const App = () => {
     }
 
     useEffect(() => {
-        searchMovie('batman');
+        searchMovie('');
     }, []);
 
     return (
@@ -36,9 +28,6 @@ const App = () => {
                 <input type="text" value={search} onChange={(event) => {
                     setSearch(event.target.value)
                 }} placeholder="Search for a movie..." />
-                {/* <img src={searchIcon} alt="search icon" onClick={() => {
-                    searchMovie(search)
-                }} /> */}
                 <p onClick={() => {
                     searchMovie(search)
                 }}>
@@ -54,7 +43,7 @@ const App = () => {
                         ))}
                     </div>) : (
                         <div className="empty">
-                            <h2>No movies found</h2>
+                            <h2>No movies found. Please search again.</h2>
                         </div>
                     )
             }
