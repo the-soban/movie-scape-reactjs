@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import './App.css';
 import searchIcon from './search.svg'
+import MovieItem from "./MovieItem";
 
 // 1cdcba83
 
@@ -15,39 +16,46 @@ const movie1 = {
 }
 
 const App = () => {
+    const [movies, setMovies] = useState([]);
+    const [search, setSearch] = useState("");
+
     const searchMovie = async (title) => {
         const response = await fetch(`${apiUrl}&s=${title}`);
         const data = await response.json();
 
-        console.log(data.Search);
+        setMovies(data.Search);
     }
+
     useEffect(() => {
         searchMovie('batman');
     }, []);
+
     return (
         <div className="app">
             <h1>Moviescape</h1>
-
-
             <div className="search">
-                <input type="text" value="batman" onChange={() => { }} placeholder="Search for a movie..." />
-                <img src={searchIcon} alt="search icon" onClick={() => { }} />
+                <input type="text" value={search} onChange={(event) => {
+                    setSearch(event.target.value)
+                }} placeholder="Search for a movie..." />
+                <img src={searchIcon} alt="search icon" onClick={() => {
+                    searchMovie(search)
+                }} />
             </div>
 
-            <div className="container">
-                <div className="movie">
-                    <div>
-                        <p>{movie1.Year}</p>
-                    </div>
-                    <div>
-                        <img src={movie1.Poster !== 'N/A' ? movie1.Poster : 'https://via.placeholder.com/400'} alt={movie1.Title} />
-                    </div>
-                    <div>
-                        <span>{movie1.Type}</span>
-                        <h3>{movie1.Title}</h3>
-                    </div>
-                </div>
-            </div>
+            {
+                movies?.length > 0
+                    ? (<div className="container">
+                        {movies.map((movie) => (
+                            <MovieItem movie={movie} />
+                        ))}
+                    </div>) : (
+                        <div className="empty">
+                            <h2>No movies found</h2>
+                        </div>
+                    )
+            }
+
+
         </div>
 
     );
