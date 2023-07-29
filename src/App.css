@@ -35,8 +35,8 @@ h1 {
   letter-spacing: 0.9px;
   background: linear-gradient(
     90deg,
-    rgba(249, 211, 180, 1) 100%,
-    rgba(249, 211, 180, 0) 100%
+    rgba(46, 208, 229, 1) 30%,
+    rgb(46, 141, 229) 70%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -80,6 +80,12 @@ h1::first-letter{
   width: 35px;
   height: 35px;
   cursor: pointer;
+  filter: saturate(0%);
+  transition: all 0.2s ease-out;
+}
+
+.search img:hover{
+  filter: saturate(80%);
 }
 
 /* .search button {
