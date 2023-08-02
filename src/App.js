@@ -1,8 +1,9 @@
+import Home from "./Home";
 import Search from "./Search";
 
 const App = () => {
     return (
-        <Search />
+        <Home />
     );
 }
 
