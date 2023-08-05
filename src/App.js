@@ -6,8 +6,12 @@ const App = () => {
     return (
         <>
             <nav>
-                <li><Link to="/">Home Page</Link></li>
-                <li><Link to="/search">Search Page</Link></li>
+                <h1>Moviescape</h1>
+                <ul>
+                    <li><Link className="link" to="/">Home Page</Link></li>
+                    <li><Link className="link" to="/search">Search Page</Link></li>
+                    <li><Link className="link" to="/about">About</Link></li>
+                </ul>
             </nav>
             {/* <Home /> */}
             <Routes>
