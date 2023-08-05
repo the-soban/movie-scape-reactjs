@@ -1,5 +1,6 @@
 import Home from "./Home";
 import Search from "./Search";
+import About from "./About";
 import { Link, Route, Routes } from 'react-router-dom';
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/search" element={<Search />} />
+                <Route path="/about" element={<About />} />
             </Routes>
         </>
     );
