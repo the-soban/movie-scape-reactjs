@@ -7,7 +7,7 @@ const App = () => {
     return (
         <>
             <nav>
-                <h1>Moviescape</h1>
+                <Link className="link" to="/"><h1>Moviescape</h1></Link>
                 <ul>
                     <li><Link className="link" to="/">Home Page</Link></li>
                     <li><Link className="link" to="/search">Search Page</Link></li>
