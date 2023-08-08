@@ -14,7 +14,12 @@
 
 body {
     font-family: var(--font-noto);
-    background-color: #212426;
+    background-color: #0f1424;
+    height: 100vh;
+}
+
+.light-body {
+    background-color: #c0c0c0;
 }
 
 a:-webkit-any-link {
@@ -41,6 +46,14 @@ nav ul {
     justify-content: center;
     align-items: center;
     gap: 16px;
+}
+
+.theme-btn {
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-right: 42px;
 }
 
 nav ul li {
@@ -87,9 +100,8 @@ h1::first-letter {
 
     padding: 1.5rem 1.75rem;
     border-radius: 1rem;
-    background: #1f2123;
-    -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-    box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 16px #27292b;
+    background: #0f1424;
+    box-shadow: 0px 4px 24px -2px rgba(14, 53, 180, 0.1);
 }
 
 .search input {
@@ -102,7 +114,7 @@ h1::first-letter {
 
     outline: none;
     color: #2ed0e5;
-    background: #1f2123;
+    background: #0f1424;
 }
 
 .search p svg {
