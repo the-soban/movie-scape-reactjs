@@ -16,6 +16,7 @@ body {
     font-family: var(--font-noto);
     background-color: #0f1424;
     height: 100vh;
+    transition: all 0.3s ease;
 }
 
 .light-body {
