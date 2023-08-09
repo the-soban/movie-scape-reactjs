@@ -23,7 +23,6 @@ const App = () => {
                     <li><Link className="link" to="/about">About</Link></li>
                 </ul>
             </nav>
-            {/* <Home /> */}
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/search" element={<Search />} />
