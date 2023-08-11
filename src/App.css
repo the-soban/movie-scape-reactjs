@@ -35,6 +35,28 @@ a:-webkit-any-link {
     flex-direction: column;
 }
 
+.hero-section {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-section h1,
+.hero-section p {
+    max-width: 800px;
+    width: 100%;
+}
+
+.hero-poster {
+    max-width: 240px;
+    width: 100%;
+    border-radius: 16px;
+}
+
 nav {
     display: flex;
     justify-content: space-between;

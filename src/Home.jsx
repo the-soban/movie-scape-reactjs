@@ -5,7 +5,18 @@ const Home = () => {
         <>
             <main className="main">
                 <section className="hero-section">
-                    <img src="/posters/poster-1917.jfif" alt="hero" />
+                    <div className="hero-images">
+                        <img
+                            className="hero-poster"
+                            src="/posters/poster-1917.jfif"
+                            alt="hero"
+                        />
+                        <img
+                            className="hero-poster"
+                            src="/posters/poster-drive.jfif"
+                            alt="hero"
+                        />
+                    </div>
                     <h2>Discover the World of Movies with Our App! 🎬🍿</h2>
                     <p>
                         Whether you're a die-hard cinephile or just looking for
