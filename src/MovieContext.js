@@ -13,7 +13,6 @@ export const MovieProvider = ({ children }) => {
         const data = await response.json()
 
         setMovies(data.Search)
-        console.log(movies)
     }
 
     return (

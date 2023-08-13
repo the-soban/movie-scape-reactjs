@@ -1,32 +1,40 @@
 import './App.css'
+import { useEffect } from 'react'
 import { useMovieContext } from './MovieContext'
+import HomeMovieItem from './MovieItem'
 
 const Home = () => {
-    const { movies } = useMovieContext()
+    const { movies, searchMovie } = useMovieContext()
+    searchMovie('batman')
+
+    useEffect(() => {
+        searchMovie('')
+    }, [])
 
     return (
         <>
             <main className="main">
                 <section className="hero-section">
                     <div className="hero-images">
-                        <img
-                            className="hero-poster"
-                            src="/posters/poster-1917.jfif"
-                            alt="hero"
-                        />
-                        <img
-                            className="hero-poster"
-                            src="/posters/poster-drive.jfif"
-                            alt="hero"
-                        />
+                        <h2>Discover the World of Movies with Our App! 🎬🍿</h2>
+                        <p>
+                            Whether you're a die-hard cinephile or just looking
+                            for a cozy movie night, we've got you covered.
+                            Introducing the easiest way to explore, search, and
+                            dive into the captivating world of cinema.
+                        </p>
+                        {movies?.length > 0 ? (
+                            <div className="home-container">
+                                {movies.map((movie) => (
+                                    <HomeMovieItem movie={movie} />
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="home-empty">
+                                <h2>Search for Movies!</h2>
+                            </div>
+                        )}
                     </div>
-                    <h2>Discover the World of Movies with Our App! 🎬🍿</h2>
-                    <p>
-                        Whether you're a die-hard cinephile or just looking for
-                        a cozy movie night, we've got you covered. Introducing
-                        the easiest way to explore, search, and dive into the
-                        captivating world of cinema.
-                    </p>
                 </section>
             </main>
         </>

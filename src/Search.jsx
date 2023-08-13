@@ -3,9 +3,6 @@ import { useMovieContext } from './MovieContext'
 import './App.css'
 import MovieItem from './MovieItem'
 
-// 1cdcba83
-// const apiUrl = 'http://www.omdbapi.com?apikey=1cdcba83'
-
 const Search = () => {
     const { movies, setMovies } = useMovieContext()
     const [search, setSearch] = useState('')
