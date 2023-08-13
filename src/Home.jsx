@@ -1,6 +1,10 @@
 import './App.css'
+import { useContext } from 'react'
+import { SearchContext } from './Search'
 
 const Home = () => {
+    const { movies } = useContext(SearchContext)
+    
     return (
         <>
             <main className="main">
