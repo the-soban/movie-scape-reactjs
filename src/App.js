@@ -3,6 +3,7 @@ import Search from "./Search";
 import About from "./About";
 import { Link, Route, Routes } from 'react-router-dom';
 import { useState } from "react";
+import { MovieProvider } from './MovieContext';
 
 const App = () => {
     const [light, setLight] = useState(false);
@@ -13,7 +14,7 @@ const App = () => {
     }
 
     return (
-        <>
+        <MovieProvider>
             <nav>
                 <Link className="link" to="/"><h1>Moviescape</h1></Link>
                 <ul>
@@ -28,7 +29,7 @@ const App = () => {
                 <Route path="/search" element={<Search />} />
                 <Route path="/about" element={<About />} />
             </Routes>
-        </>
+        </MovieProvider>
     );
 }
 

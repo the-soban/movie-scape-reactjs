@@ -1,10 +1,9 @@
 import './App.css'
-import { useContext } from 'react'
-import { SearchContext } from './Search'
+import { useMovieContext } from './MovieContext'
 
 const Home = () => {
-    const { movies } = useContext(SearchContext)
-    
+    const { movies } = useMovieContext()
+
     return (
         <>
             <main className="main">
