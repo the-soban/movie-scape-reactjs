@@ -1,11 +1,11 @@
 import './App.css'
 import { useEffect } from 'react'
 import { useMovieContext } from './MovieContext'
-import HomeMovieItem from './MovieItem'
+import HomeMovieItem from './HomeMovieItem'
 
 const Home = () => {
     const { movies, searchMovie } = useMovieContext()
-    searchMovie('drive')
+    searchMovie('islam')
 
     useEffect(() => {
         searchMovie('')
