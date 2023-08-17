@@ -5,7 +5,7 @@ import HomeMovieItem from './HomeMovieItem'
 
 const Home = () => {
     const { movies, searchMovie } = useMovieContext()
-    searchMovie('islam')
+    searchMovie('transformers')
 
     useEffect(() => {
         searchMovie('')
