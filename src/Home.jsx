@@ -16,7 +16,11 @@ const Home = () => {
             <main className="main">
                 <section className="hero-section">
                     <div className="hero-images">
-                        <h2>Discover the World of Movies with Our App! 🎬🍿</h2>
+                        <h2>
+                            Discover the World of
+                            <br />
+                            Movies with Our App! 🎬🍿
+                        </h2>
                         <p>
                             Whether you're a die-hard cinephile or just looking
                             for a cozy movie night, we've got you covered.

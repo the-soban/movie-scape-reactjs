@@ -16,9 +16,9 @@ const App = () => {
     return (
         <MovieProvider>
             <nav>
-                <Link className="link" to="/"><h1>Moviescape</h1></Link>
+                <Link className="link" to="/"><h1 className="logo">Moviescape</h1></Link>
                 <ul>
-                    <li className="theme-btn" onClick={handleClick}>Dark Mode</li>
+                    <li className="theme-btn" onClick={handleClick}>Light Mode</li>
                     <li><Link className="link" to="/">Home Page</Link></li>
                     <li><Link className="link" to="/search">Search Page</Link></li>
                     <li><Link className="link" to="/about">About</Link></li>

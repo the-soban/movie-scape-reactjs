@@ -3,7 +3,7 @@ import React from 'react'
 const HomeMovieItem = ({ movie }) => {
     return (
         <div className="home-movie">
-            <div>
+            <div className='div1'>
                 <p>{movie.Year}</p>
             </div>
             <div>

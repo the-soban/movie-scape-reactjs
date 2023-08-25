@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 * {
     margin: 0;
     border: 0;
@@ -15,12 +27,21 @@
 body {
     font-family: var(--font-noto);
     background-color: #0f1424;
+
+    /* --- FOR BG GRADIENT ANIMATION: --- */
+    background: linear-gradient(132deg, #0f1424, #391761, #0b2364);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
+    position: relative;
+    overflow-x: hidden;
+
     height: 100vh;
+    width: 100%;
     transition: all 0.3s ease;
 }
 
 .light-body {
-    background-color: #c0c0c0;
+    background-color: #f9fbff;
 }
 
 a:-webkit-any-link {
@@ -49,6 +70,26 @@ a:-webkit-any-link {
 .hero-section p {
     max-width: 800px;
     width: 100%;
+}
+
+.hero-images {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.hero-images h2 {
+    color: rgb(46, 208, 229);
+}
+
+.hero-images p {
+    color: #fff;
+    font-family: var(--font-noto);
+    font-size: 20px;
+    line-height: 28px;
 }
 
 .hero-poster {
@@ -91,7 +132,7 @@ nav ul li .link:hover {
     text-decoration: underline;
 }
 
-h1 {
+.logo {
     font-family: 'Oswald', sans-serif;
     font-size: 3rem;
     font-weight: bold;
@@ -239,7 +280,7 @@ h1::first-letter {
     opacity: 1;
     top: 0;
     color: #f9d3b4;
-    background-color: #343739;
+    background-color: #141414;
     transition: all 0.2s ease-in-out;
 }
 
@@ -264,7 +305,7 @@ h1::first-letter {
 
 .home-movie div:nth-of-type(3) {
     z-index: 2;
-    background-color: #343739;
+    background-color: #141414;
     padding: 12px 20px 20px;
     opacity: 1;
 
