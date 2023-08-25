@@ -29,11 +29,11 @@ body {
     background-color: #0f1424;
 
     /* --- FOR BG GRADIENT ANIMATION: --- */
-    background: linear-gradient(132deg, #0f1424, #391761, #0b2364);
+    /* background: linear-gradient(132deg, #0f1424, #391761, #0b2364);
     background-size: 400% 400%;
     animation: Gradient 15s ease infinite;
     position: relative;
-    overflow-x: hidden;
+    overflow-x: hidden; */
 
     height: 100vh;
     width: 100%;
