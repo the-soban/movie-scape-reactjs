@@ -19,7 +19,8 @@ const Home = () => {
                         <h2>
                             Discover the World of
                             <br />
-                            Movies with Our App! 🎬🍿
+                            Movies with Our App!{' '}
+                            <span className="emojis">🎬🍿</span>
                         </h2>
                         <p>
                             Whether you're a die-hard cinephile or just looking
@@ -28,11 +29,14 @@ const Home = () => {
                             dive into the captivating world of cinema.
                         </p>
                         {movies?.length > 0 ? (
-                            <div className="home-container">
-                                {movies.map((movie) => (
-                                    <HomeMovieItem movie={movie} />
-                                ))}
-                            </div>
+                            <>
+                                <span>(Explore Movies Here 👇)</span>
+                                <div className="home-container">
+                                    {movies.map((movie) => (
+                                        <HomeMovieItem movie={movie} />
+                                    ))}
+                                </div>
+                            </>
                         ) : (
                             <div className="home-empty">
                                 <h2>Search for Movies!</h2>
