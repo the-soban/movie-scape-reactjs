@@ -82,6 +82,10 @@ a:-webkit-any-link {
     margin-top: 40px;
 }
 
+.hero-images-dark {
+    color: black !important;
+}
+
 .hero-images h2 {
     font-family: var(--font-raleway);
     font-size: 46px;

@@ -1,3 +1,4 @@
+import React from 'react'
 import './App.css'
 import { useEffect } from 'react'
 import { useMovieContext } from './MovieContext'
@@ -10,6 +11,13 @@ const Home = () => {
     useEffect(() => {
         searchMovie('')
     }, [])
+
+    const { light, setLight } = useMovieContext()
+
+    const handleClick = () => {
+        setLight(!light)
+        document.body.classList.toggle('light-body')
+    }
 
     return (
         <>
@@ -30,7 +38,9 @@ const Home = () => {
                         </p>
                         {movies?.length > 0 ? (
                             <>
-                                <span>(Explore Movies Here 👇)</span>
+                                <span onClick={handleClick}>
+                                    (Explore Movies Here 👇)
+                                </span>
                                 <div className="home-container">
                                     {movies.map((movie) => (
                                         <HomeMovieItem movie={movie} />

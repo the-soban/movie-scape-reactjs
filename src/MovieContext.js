@@ -4,6 +4,7 @@ const MovieContext = createContext();
 
 export const MovieProvider = ({ children }) => {
     const [movies, setMovies] = useState([]);
+    const [light, setLight] = useState(false)
 
     // 1cdcba83
     const apiUrl = 'http://www.omdbapi.com?apikey=1cdcba83'
@@ -16,7 +17,7 @@ export const MovieProvider = ({ children }) => {
     }
 
     return (
-        <MovieContext.Provider value={{ movies, setMovies, searchMovie }}>
+        <MovieContext.Provider value={{ movies, setMovies, searchMovie, light, setLight }}>
             {children}
         </MovieContext.Provider>
     );
